@@ -47,8 +47,12 @@
 };
 
 / {
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
     chosen {
         zmk,charmap = &charmap_us;
+        zmk,battery = &vbatt;
     };
     behaviors {
         ht: hold_tap {
